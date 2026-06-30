@@ -20,9 +20,14 @@ namespace Csharp_mastery._02_OOPs
         //    Console.WriteLine(name);
         //}
 
-        public  void  Work()
+        public  override void  Work()
         {
             Console.WriteLine("I am devloper");
+        }
+
+        public void code()
+        {
+            Console.WriteLine("I am coding ");
         }
     }
 }

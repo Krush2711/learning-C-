@@ -84,12 +84,36 @@ namespace Csharp_mastery._02_OOPs
             //Console.WriteLine(p1.Price);
 
 
-            Devloper D = new Devloper();
-            //D.Name = "Nutan";
-            //D.Salary = 50000;
-            //D.Department = "Tester";
-            //D.ProgramingLanguage = "Python";
-            D.Work();
+            Employee D = new Devloper(); // upcasting
+            D.Name = "Nutan";
+            D.Salary = 50000;
+            D.Department = "Tester";
+            //D.ProgramingLanguage = "Python"; -> this will give an error beacuse the complier only knows the fileds from the Emoplyee class. about the child class it dosnt know anything.
+            // to attend this -> we will need Down casting -> parnet reffering to the child.
+
+            Devloper Dd = (Devloper)D;
+            Dd.ProgramingLanguage = "html";
+
+            //Dd.Work()
+            //D.Work
+            //Dd.code();
+            Employee e = new Employee();
+
+            if(e is Devloper)
+            {
+                Console.WriteLine("True");
+            }
+            else
+            {
+                Console.WriteLine("False");
+            }
+
+            Devloper nev_dev = (Devloper) e;
+            //Devloper new_dev = e as Devloper; // empty object
+
+            //Console.WriteLine("null : ? "+new_dev);
+
         }
     }
-}
+   }
+
